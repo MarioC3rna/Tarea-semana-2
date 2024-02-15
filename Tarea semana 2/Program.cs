@@ -1,34 +1,67 @@
-﻿Console.WriteLine("Conversion de tipos ");
+﻿Console.WriteLine("Uso de char y string");
+Console.WriteLine("");
 
-//De entero a decimal
-Console.WriteLine("--Ingrese el numero Entero--");
-int entero = Convert.ToInt32(Console.ReadLine());
-decimal numDecimal = Convert.ToDecimal(entero);
-Console.WriteLine("Numero decimal es " + numDecimal.ToString("0.0"));
+//Texto a Mayusculas
+string nota1, notaM;
+Console.WriteLine("---Ingrese su texto para que lo imprima en Mayuscula---");
+Console.WriteLine("");
+Console.WriteLine("Ingrese su texto aqui en Minuscula");
+nota1 = Console.ReadLine();
+notaM = nota1.ToUpper();
+Console.WriteLine("Este es su texto " + notaM);
 
-//De decimal a flotante
-Console.WriteLine("--Ingrese el numero decimal--");
-decimal nDecimal = Convert.ToDecimal(Console.ReadLine());
-float numfloat = Convert.ToSingle(nDecimal);
-Console.WriteLine($"Numero Flotante es " + numfloat.ToString("0.00"));
+//Imprime en Minusculas 
+string nota2, notam;
+Console.WriteLine("");
+Console.WriteLine("--Ingrese su texto para que lo imprima en Minusculas--");
+Console.WriteLine("");
+Console.WriteLine("Ingrese su texto aqui en Mayusculas");
+nota2 = Console.ReadLine();
+notam = nota2.ToLower();
+Console.WriteLine("Este es su texto " + notam);
 
-//De flotante a entero
-Console.WriteLine("--Ingrese el numero flotante--");
-float nufloat = Convert.ToSingle(Console.ReadLine());
-int numEntero = Convert.ToInt32(nufloat);
-Console.WriteLine("Numero entero es " + numEntero);
+//Imprime al reves 
+string nota3;
+Console.WriteLine("");
+Console.WriteLine("--Ingrese su texto que quire imprimir al reves--");
+Console.WriteLine("");
+Console.WriteLine("Ingrese su texto aqui su texto");
+nota3 = Console.ReadLine();
+char[] notaInv = nota3.ToCharArray();
+Array.Reverse(notaInv);
+string notaNueva = new string(notaInv);
+Console.WriteLine("Este es su texto " + notaNueva);
 
-// De entero a caracter
-Console.WriteLine("--Ingrese el numero entero--");
-int nEntero = Convert.ToInt32(Console.ReadLine());
-char nCaracter = Convert.ToChar(nEntero);
-Console.WriteLine("El caracter es " + nCaracter);
-
-//De caracter a entero
-Console.WriteLine("--Ingrese el caracter--");
-char Caractern = Convert.ToChar(Console.ReadLine());
-int nuEntero = Convert.ToInt32(Caractern);
-Console.WriteLine("Numero entero es " + nuEntero);
-
+//Buscardor
+string nota4;
+Console.WriteLine("");
+Console.WriteLine("---Ingrese su cadena de texto---");
+Console.WriteLine("");
+nota4 = Console.ReadLine();
+Console.WriteLine("Ingrese la palabra que quiere buscar");
+string Pbuscar = Console.ReadLine();
+string notaMinus = nota4.ToLower();
+bool Pbuscada = nota4.Contains(notaMinus);
 
 
+
+if (Pbuscada)
+{
+
+    Console.WriteLine("La palabra " + Pbuscar + " Fue encontrada ");
+}
+else
+{
+
+    Console.WriteLine("La palabra" + Pbuscar + "No fue encontrada en el texto ");
+}
+
+//Contar las Vocales 
+string nota5;
+Console.WriteLine("");
+Console.WriteLine("--Ingrese su texto del cual quiere contar las vocales--");
+Console.WriteLine("");
+Console.WriteLine("Ingrese su texto aqui ");
+nota5 = Console.ReadLine();
+int Cvocales = nota5.Count(c => "aeiouAEIOU".Contains(c));
+Console.WriteLine("Este es la cantidad de vocales que tiene su texto " + Cvocales);
