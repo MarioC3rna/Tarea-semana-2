@@ -56,7 +56,7 @@ else
     Console.WriteLine("La palabra" + Pbuscar + "No fue encontrada en el texto ");
 }
 
-//Contar las Vocales 
+//Contardor de las Vocales
 string nota5;
 Console.WriteLine("");
 Console.WriteLine("--Ingrese su texto del cual quiere contar las vocales--");
